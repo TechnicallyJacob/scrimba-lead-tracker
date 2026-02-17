@@ -1,9 +1,14 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js"
+import { getDatabase } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-database.js"
 
 const firebaseConfig = {
+    databaseURL : process.env.DATABASE_URL
 };
 
 const app = initializeApp(firebaseConfig);
+const database = getDatabase(app)
+
+console.log(firebaseConfig.databaseURL)
 
 let myLeads = []
 const inputEl = document.getElementById("input-el")
