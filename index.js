@@ -1,4 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-app.js"
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-analytics.js";
 import { getDatabase } from "https://www.gstatic.com/firebasejs/12.9.0/firebase-database.js"
 
 const firebaseConfig = {
@@ -6,6 +7,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 const database = getDatabase(app)
 
 console.log(firebaseConfig.databaseURL)
